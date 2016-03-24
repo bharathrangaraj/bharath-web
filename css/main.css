@@ -78,5 +78,33 @@
 .jumbotron{
     border-bottom-color: orangered;
     border-bottom: double;
+    margin-bottom: 10px;
 }
 
+#about-img{
+    max-width: 300px;
+    max-height: 300px;
+}
+#about-me{
+    color: black;
+    font-weight:300;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-me-img{
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.about-me-text{
+    margin-top:30px;
+    margin-bottom:30px;
+    font-size: large;
+}
+.abt-link{
+    color:orangered;
+
+}
+.abt-link:hover{
+    color:orangered;
+}
