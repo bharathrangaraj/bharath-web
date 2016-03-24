@@ -8,9 +8,13 @@
         text-align: center;
     }
 }
+.navbar{
+    margin-bottom: 0;
+}
 #main-nav{
     background-color:white;
-    border-bottom-color:orange;
+    border-bottom-color:orangered;
+    border-style:double;
 
 }
 /*chnage the color of the menu*/
@@ -38,5 +42,41 @@
     margin-top: 8px;
 }
 
+#jumbo-main{
+    background-color: black;
+}
 
+#jum-head{
+    color: white;
+    font-weight:700;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 50px;
+}
+.jum-logo{
+    max-width:200px;
+    max-width:200px;
+}
+
+#jum-subh{
+    margin-bottom: 50px;
+    margin-top:50px;
+}
+.btn-default{
+    border-color: orangered;
+    border-radius: 0;
+    border-style: double;
+    color: orangered;
+}
+
+.btn-default:hover{
+    color:black;
+}
+
+#jum-btn{
+    margin-bottom:100px;
+}
+.jumbotron{
+    border-bottom-color: orangered;
+    border-bottom: double;
+}
 
