@@ -1,0 +1,42 @@
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav{
+        float: none;
+        display: inline-block;
+    }
+    .navbar .navbar-collapse{
+        text-align: center;
+    }
+}
+#main-nav{
+    background-color:white;
+    border-bottom-color:orange;
+
+}
+/*chnage the color of the menu*/
+#main-nav .navbar-nav>li>a {
+    /* color: #777; */
+    color: black;
+    font-weight:700;
+    font-family: 'Montserrat', sans-serif;
+
+}
+/*onhover underline men items*/
+#main-nav .navbar-nav>li>a:hover{
+    text-decoration: underline;
+}
+/*navbar brand black*/
+#main-nav .navbar-brand{
+    color: black;
+    font-weight:700;
+    font-family: 'Montserrat', sans-serif;
+}
+#menu-img{
+    max-width: 40px;
+    max-height: 40px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+
+
