@@ -119,6 +119,27 @@ g >line {
     shape-rendering: crispEdges;
 }
 
+g >#downx{
+
+    stroke:black;
+    shape-rendering: crispEdges;
+}
+#downx >path{
+    fill: none;
+    stroke:black;
+    shape-rendering: crispEdges;
+}
+g >#upx{
+
+    stroke:black;
+    shape-rendering: crispEdges;
+}
+#upx >path{
+    fill: none;
+    stroke:black;
+    shape-rendering: crispEdges;
+}
+
 g > text {
 
     font-size: 13px;
