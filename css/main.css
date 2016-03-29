@@ -89,6 +89,8 @@
     color: black;
     font-weight:300;
     font-family: 'Montserrat', sans-serif;
+    border-bottom-color:orangered;
+    border-bottom-style:solid;
 }
 
 .about-me-img{
@@ -100,6 +102,7 @@
     margin-top:30px;
     margin-bottom:30px;
     font-size: large;
+
 }
 .abt-link{
     color:orangered;
@@ -107,4 +110,24 @@
 }
 .abt-link:hover{
     color:orangered;
+}
+
+g > path,
+g >line {
+    fill: none;
+    stroke:none;
+    shape-rendering: crispEdges;
+}
+
+g > text {
+
+    font-size: 13px;
+    font-size: large;
+}
+
+#skill-set{
+    color: black;
+    font-weight:300;
+    background-color: #ffece5;
+    font-family: 'Montserrat', sans-serif;
 }
