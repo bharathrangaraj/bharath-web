@@ -37,6 +37,7 @@ var yScale3=d3.scale.linear()
     .domain([0,framework.length]).range([0,250]);
 //color scale to scale the color for different skill level
 var colorScale=d3.scale.linear().domain([0,10]).range(['#ffc7b2','#ff4500']);
+
 //xAxis(use it only once)
 var xAxis=d3.svg.axis().scale(xScale).orient('bottom');
 //yAxis -mentioning the name of the technolgies
@@ -225,6 +226,33 @@ gr4.selectAll('rect').data(chardata4).transition().duration(1000).attr('width',f
     return xScale(d);
 });
 
+$(function(){
+    $(".typeText").typed({
+        strings: ["Javascript", "Full-stack Developer."],
+        typeSpeed: 0,
+        loop:true
+    });
+});
+
+$('.jum-but').click(function(){
+
+    gr.selectAll('rect').data(chardata).transition().duration(1000).attr('width',function(d){
+        return xScale(d);
+    });
+    gr1.selectAll('rect').data(chardata1).transition().duration(1000).attr('width',function(d){
+        return xScale(d);
+    });
+    gr2.selectAll('rect').data(chardata2).transition().duration(1000).attr('width',function(d){
+        return xScale(d);
+    });
+    gr3.selectAll('rect').data(chardata3).transition().duration(1000).attr('width',function(d){
+        return xScale(d);
+    });
+    gr4.selectAll('rect').data(chardata4).transition().duration(1000).attr('width',function(d){
+        return xScale(d);
+    });
+
+})
 
 
 
