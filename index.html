@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bharath-rangaraj</title>
+    <title>Bharath rangaraj</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -24,8 +25,9 @@
      <div class="collapse navbar-collapse" id="mainmenu">
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#about-me">ABOUT ME</a> </li>
-            <li><a href="#skill-set" id="skills">SKILLS</a> </li>
-            <li><a href="#">PROJECTS</a> </li>
+            <li class="hidden-xs hidden-sm hidden-md"><a href="#skill-set" id="skills">SKILLS</a> </li>
+            <li><a href="#portfolio">PORTFOLIO</a> </li>
+            <li><a href="#footer">CONTACT</a> </li>
         </ul>
      </div>
  </nav>
@@ -39,7 +41,7 @@
                             <span class="typeText"></span>
                      </div>
                      <div id="jum-btn">
-                         <a href="#skill-set" class="btn btn-lg btn-default jum-but">SKILLS</a>&nbsp;&nbsp; <span><a href="#projects" class="btn btn-lg btn-default">PROJECTS</a> </span>
+                         <a href="#skill-set" class="btn btn-lg btn-default jum-but hidden-xs hidden-sm hidden-md">SKILLS</a>&nbsp;&nbsp; <span><a href="#portfolio" class="btn btn-lg btn-default">PROJECTS</a> </span>
                      </div>
 
                  </div>
@@ -49,7 +51,7 @@
      </div>
  </div>
 
- <section id="about-me">
+ <section id="about-me" >
      <div class="container">
          <div class="row">
              <div class="col-xs-12">
@@ -91,14 +93,14 @@
 
  </section>
 
- <section id="skill-set">
+ <section id="skill-set" class="hidden-xs hidden-sm hidden-md">
      <div class="container">
          <div class="row">
              <div class="col-xs-12 text-center">
                  <h3>SKILL SET</h3>
              </div>
              <div class="col-xs-12 hb0" >
-                 <!--Prototype graph-->
+                 <!--x-axis-->
              </div>
              <div class="col-xs-12">
                  <h4>DESIGN</h4>
@@ -132,6 +134,231 @@
              </div>
          </div>
      </div>
+ </section>
+
+ <section id="portfolio">
+     <div class="container">
+         <div class="row">
+             <div class="col-xs-12">
+                 <div class="col-xs-12 text-center sec-tit">
+                 <h3>PORTFOLIO</h3>
+             </div>
+                 <div class="col-md-4 col-sm-6" data-toggle="modal" data-target="#learninghub" role="button">
+                   <img src="./img/learnHub_edit1_2.png" class="img-thumbnail" >
+                     <h4 class="text-center port-tit">LearningHub</h4>
+
+                 </div>
+                 <div class="modal fade" tabindex="-1" id="learninghub">
+                     <div class="modal-dialog">
+                         <div class="modal-content">
+                             <div class="modal-header">
+                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                 <h4 class="modal-title">LearningHub - A knowledge Aggregator and filter for collaborative learning</h4>
+                             </div>
+                             <div class="modal-body">
+                                 <div class="col-xs-12">
+                                     <img src="./img/learnHub_edit1_2.png" class="img-responsive" >
+                                 </div>
+                                 <div class="col-xs-12">
+                                     <h4 class="pd-m">Description</h4>
+
+                                     <ul>
+
+                                         <li>Working at the
+                                             Learning Technologies Research Group of RWTH.</li>
+                                         <li>A tool for the aggregation of different types of learning
+                                             resources available on the internet to support pull-learning
+                                             model.</li>
+                                          <li>The tool is integrated to CourseMapper - a MOOC platform
+                                              currently under development in RWTH.</li>
+                                         <li><strong>Technologies used:</strong>AngularJS, ExpressJS, Node.js,
+                                             MongoDB, MongooseJS, JQuery, HTML 5, CSS 3, Bootstrap.</li>
+
+                                     </ul>
+
+
+                                 </div>
+
+                             </div>
+                             <div class="modal-footer">
+                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-4 col-sm-6" data-toggle="modal" data-target="#development" role="button">
+                     <img src="./img/development-tools.jpg" class="img-thumbnail" >
+                     <h4 class="text-center port-tit">Development Tools</h4>
+
+                 </div>
+                 <div class="modal fade" tabindex="-1" id="development">
+                     <div class="modal-dialog">
+                         <div class="modal-content">
+                             <div class="modal-header">
+                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                 <h4 class="modal-title">Development Tools (Seminar Paper)</h4>
+                             </div>
+                             <div class="modal-body">
+                                 <div class="col-xs-12">
+                                     <img src="./img/development-tools.jpg" class="img-responsive" >
+                                 </div>
+                                 <h4>ABSTRACT</h4>
+                                 <p class="text-justify">Developers use various IDEs as per their comfort in
+                                     order to produce and maintain code. Software
+                                     maintenance is a very time consuming task as it requires
+                                     a developer to efficiently navigate through the various
+                                     dependencies and comprehend it. Doing this without any
+                                     extra aid is a tedious job. Code comprehension and code
+                                     navigation are two of many important processes that a
+                                     developer undertakes during software maintenance tasks.
+                                     Integrated Development Environments (IDEs) can aid
+                                     these processes. This can be done by providing different
+                                     visualisations of code, widgets and windows and
+                                     abstracting non-essential information from the Interface.
+                                     In essence, IDEs should cater to task context by
+                                     modelling developer strategies. User studies can analyse
+                                     developer’s navigation behaviour and show how this
+                                     task context can be analysed. Some IDEs, tools, plugins
+                                     implement these concepts to help developers
+                                     comprehend and navigate through source code
+                                     effectively and efficiently. Empirical studies indicate an
+                                     increased developer productivity, when using such tools.
+                                 </p>
+                                 <p>Read the complete paper <a href="./pdf/devtools.pdf" class="abt-link">here</a></p>
+
+                             </div>
+                             <div class="modal-footer">
+                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+
+                 <div class="col-md-4 col-sm-6" data-toggle="modal" data-target="#pdui" role="button">
+                     <img src="./img/pdui.png" class="img-thumbnail" >
+                     <h4 class="text-center port-tit">Analysing Mid-Air Input For Horizontal And Vertical Axes For
+                         Pointing Tasks</h4>
+
+                 </div>
+                 <div class="modal fade" tabindex="-1" id="pdui">
+                     <div class="modal-dialog">
+                         <div class="modal-content">
+                             <div class="modal-header">
+                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                 <h4 class="modal-title">Analysing Mid-Air Input For Horizontal And Vertical Axes For
+                                     Pointing Tasks</h4>
+                             </div>
+                             <div class="modal-body">
+                                 <div class="col-xs-12">
+                                     <img src="./img/pdui.png" class="img-responsive" >
+                                 </div>
+                                 <div class="col-xs-12">
+                                     <h4 class="pd-m">ABSTRACT</h4>
+                                     <p class="text-justify">
+                                         In the previous studies of mid-air input techniques there
+                                         were no or little comparison on vertical versus horizontal
+                                         input modalities. Further users are accustomed to indirect
+                                         mapping techniques while using mouse and track pad to
+                                         move the mouse cursor. Here the movement of the physical
+                                         input device is perpendicular to the display screen. On the
+                                         other hand, users are also acquainted to discrete mapping
+                                         manipulation techniques from phones and tablet devices.
+                                         We captured and examined the difference between mid air
+                                         input for vertical and horizontal planes using a leap motion
+                                         capable of recognizing the gestures coupled with a
+                                         custom built java application for the Fitt’s law that adheres
+                                         to the standards. We do this by analyzing the data gathered
+                                         using task completion time for Fitts’ Law task defined by
+                                         the ISO 9241-9 standard.
+                                     </p>
+                                     <p>Read the complete paper <a href="./pdf/pdui.pdf" class="abt-link">here</a></p>
+
+
+                                 </div>
+
+                             </div>
+                             <div class="modal-footer">
+                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="clearfix"></div>
+                 <div class="col-md-4 col-sm-6" data-toggle="modal" data-target="#tv" role="button">
+                     <img src="./img/dis2.png" class="img-thumbnail" >
+                     <h4 class="text-center port-tit">Future Television UX - TV Cloud</h4>
+
+                 </div>
+
+                 <div class="modal fade" tabindex="-1" id="tv">
+                     <div class="modal-dialog">
+                         <div class="modal-content">
+                             <div class="modal-header">
+                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                 <h4 class="modal-title">Future Television UX - TV Cloud</h4>
+                             </div>
+                             <div class="modal-body">
+                                 <div class="col-xs-12">
+                                     <img src="./img/dis2.png" class="img-responsive" >
+                                 </div>
+                                 <div class="col-xs-12">
+                                     <h4 class="pd-m">Description</h4>
+                                     <p>
+                                     <ul>
+                                     <li>A project to enhance the TV experience by Integrated the
+                                         Second screen(mobile phone) to the First screen(Television).</li>
+                                     <li>The user can tag live comments using the mobile phone to the
+                                         content on the television.</li>
+                                     <li><strong>Technologies used:</strong>Java EE, Java FX and Android SDK.</li>
+
+                                    </ul>
+
+                                     </p>
+
+                                 </div>
+
+                             </div>
+                             <div class="modal-footer">
+                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+             </div>
+
+         </div>
+
+         </div>
+ </section>
+
+
+ <section id="footer">
+     <div class="container">
+         <div class="row">
+             <div class="col-xs-12">
+                 <div class="col-sm-8">
+                     <address>
+                         <strong>Bharath Rangaraj</strong><br>
+                         Schillerstrasse 86-88<br>
+                         52064 Aachen<br>
+                         Germany
+                     </address>
+                 </div>
+                 <div class="col-sm-4">
+                     <ul class="list-inline">
+                         <li><a href="https://de.linkedin.com/in/bharathrangaraj"class="abt-link"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
+                         <li><a href="https://github.com/bharathrangaraj" class="abt-link"><i class="fa  fa-github fa-3x"></i></a></li>
+
+                     </ul>
+                     <span class="glyphicon glyphicon-send"></span><span>&nbsp;&nbsp;<a href="mailto:#" class="abt-link">bharath.rangaraj@rwth-aachen.de</a></span>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+
  </section>
 
 
