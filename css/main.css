@@ -1,19 +1,11 @@
 
-@media (min-width: 768px) {
-    .navbar .navbar-nav{
-        float: none;
-        display: inline-block;
-    }
-    .navbar .navbar-collapse{
-        text-align: center;
-    }
-}
+
 .navbar{
     margin-bottom: 0;
 }
 #main-nav{
     background-color:white;
-    border-bottom-color:orangered;
+    border-bottom-color:#E74C3C;
     border-style:double;
 
 }
@@ -42,8 +34,12 @@
     margin-top: 8px;
 }
 
-#jumbo-main{
-    background-color: black;
+.jumbotron{
+    background:url(../img/b_img_bw.gif) no-repeat;
+    background-size:100% 100%;
+    margin-bottom: 10px;
+    position:relative;
+    overflow: hidden;
 }
 
 #jum-head{
@@ -51,6 +47,8 @@
     font-weight:700;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 50px;
+    /*margin-top:300px;*/
+
 }
 .jum-logo{
     max-width:200px;
@@ -59,17 +57,15 @@
 
 #jum-subh{
     margin-bottom: 50px;
-    margin-top:50px;
+    margin-top:300px;
     font-size:30px;
-
-
 
 }
 .btn-default{
-    border-color: orangered;
+    border-color: #E74C3C;
     border-radius: 0;
     border-style: double;
-    color: orangered;
+    color: #E74C3C;
 }
 
 .btn-default:hover{
@@ -78,11 +74,13 @@
 
 #jum-btn{
     margin-bottom:100px;
+
 }
-.jumbotron{
-    border-bottom-color: orangered;
-    border-bottom: double;
-    margin-bottom: 10px;
+.jum-but{
+    background: black;
+    opacity: 0.8;
+    color: #ECF0F1;
+    border-color: #ECF0F1;
 }
 
 #about-img{
@@ -93,8 +91,12 @@
     color: black;
     font-weight:300;
     font-family: 'Montserrat', sans-serif;
-    border-bottom-color:orangered;
+    border-bottom-color:#E74C3C;
     border-bottom-style:solid;
+    background-attachment: fixed;
+}
+#jum{
+    background-attachment: fixed;
 }
 
 .about-me-img{
@@ -109,11 +111,16 @@
 
 }
 .abt-link{
-    color:orangered;
+    color:#E74C3C;
 
 }
 .abt-link:hover{
-    color:orangered;
+    color:#E74C3C;
+}
+
+#myChart{
+    height:400px;
+    width:100%;
 }
 
 g > path,
@@ -153,18 +160,25 @@ g > text {
 #skill-set{
     color: black;
     font-weight:300;
-    background-color: #ffece5;
     font-family: 'Montserrat', sans-serif;
     padding-bottom:20px;
+    background:url(../img/fin.gif) no-repeat;
+    background-attachment: fixed;
+    background-size:100% 100%;
+    margin-bottom: 10px;
+    position:relative;
+    overflow: hidden;
 
 }
+
 #portfolio{
     color: black;
     font-weight:300;
-    border-bottom-color:orangered;
+    border-bottom-color:#E74C3C;
     border-bottom-style: solid;
     font-family: 'Montserrat', sans-serif;
     padding-bottom:30px;
+    background-attachment: fixed;
 }
 
 .typed-cursor{
@@ -194,21 +208,108 @@ g > text {
 }
 
 .port-tit{
-    background-color: #FF7947;
+    background-color:white;
+    color: #E74C3C;
     margin-top:0px;
     margin-bottom:0px;
     padding-top:10px;
     padding-bottom:10px;
+    border: 2px solid #E74C3C;
 }
 
 
 #footer{
-    color: black;
+    color: #ECF0F1;
     font-weight:300;
     font-family: 'Montserrat', sans-serif;
-    background-color: #ffece5;
+    background-color: #2C3E50;
     padding-top: 30px;
+    height:200px;
+    background-attachment: fixed;
+
 }
+
+.pro-link{
+    color: #ECF0F1;
+
+}
+.pro-link:hover{
+    color: #E74C3C;
+}
+
+.modal-title{
+    color: #E74C3C;
+
+}
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.typeText{
+    color: white;
+    font-size: 48px;
+    font-weight:700;
+    font-family: 'Montserrat', sans-serif;
+}
+@media screen and (max-width: 992px) {
+   .typeText{
+       font-size: 36px;
+   }
+}
+@media (min-width: 768px) {
+    .navbar .navbar-nav{
+        float: none;
+        display: inline-block;
+    }
+    .navbar .navbar-collapse{
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .typeText{
+        font-size: 24px;
+    }
+    #jum-subh{
+        margin-bottom: 50px;
+        margin-top:200px;
+        font-size:30px;
+
+    }
+
+}
+.sec1-tit{
+    color: #E74C3C;
+
+}
+
+.gradio{
+    color: #E74C3C;
+}
+input[type=radio]:checked{
+    background-color:#E74C3C;
+}
+
+
 
 
 

@@ -1,262 +1,115 @@
-/**
- * Created by Bharath on 29/03/16.
- */
-//Specify domain specif data-DESIGN
-var chardata=[5,5];
-var design=['photoshop CC',"OmniGraffle"];
-//Specify domain specif data-PROTOTYPING
-var chardata1=[7,5];
-var prototype=['Axure RP','Adobe FireWorks'];
-//Specify domain specif data-WEB TECHNOLOGIES
-var chardata2=[7,6,7,5];
-var webTechnologies=['HTML 5','CSS 3','Javascript','PHP'];
-//Specify domain specif data-LANGUAGES
-var chardata3=[5,7,7,8];
-var language=['C','JAVA','SQL','NoSQL'];
-//Specify domain specif data-FRAMEWORKS
-var chardata4=[8,7,7,7,6,6,8];
-var framework=['MongoDB','ExpressJS','AngularJS','Node.js','MongooseJS','JQuery','Bootstrap'];
-//height of bar
-var barHeight=20;
-//canvas height and width
-var height=120;
-var width=1000;
-var heightWeb=150;
-var heightFram=300;
-//xscale for scaling the skill level with respect to maximumvalue of 10
-var xScale = d3.scale.linear()
-    .domain([0,10])
-    .range([0,width-150]);
 
-//yscale for the name of the technologies
-var yScale=d3.scale.linear()
-    .domain([0,design.length]).range([0,70]);
-var yScale2=d3.scale.linear()
-    .domain([0,webTechnologies.length]).range([0,150]);
-var yScale3=d3.scale.linear()
-    .domain([0,framework.length]).range([0,250]);
-//color scale to scale the color for different skill level
-var colorScale=d3.scale.linear().domain([0,10]).range(['#ffc7b2','#ff4500']);
 
-//xAxis(use it only once)
-var xAxis=d3.svg.axis().scale(xScale).orient('bottom');
-//yAxis -mentioning the name of the technolgies
-var yAxis=d3.svg.axis().scale(yScale).tickFormat(function(d,i){
-    return design[i];
-}).tickValues(d3.range(2)).orient('left');
-var yAxis1=d3.svg.axis().scale(yScale).tickFormat(function(d,i){
-    return prototype[i];
-}).tickValues(d3.range(2)).orient('left');
-var yAxis2=d3.svg.axis().scale(yScale2).tickFormat(function(d,i){
-    return webTechnologies[i];
-}).tickValues(d3.range(4)).orient('left');
-var yAxis3=d3.svg.axis().scale(yScale2).tickFormat(function(d,i){
-    return language[i];
-}).tickValues(d3.range(4)).orient('left');
-var yAxis4=d3.svg.axis().scale(yScale3).tickFormat(function(d,i){
-    return framework[i];
-}).tickValues(d3.range(7)).orient('left');
+var radioVal=1;
+var tit;
+$.stellar();
+$(document).ready(function() {
 
-var gr0=d3.select('.hb0')
-    .append('svg')
-    .attr('width',width)
-    .attr('height',50)
-    .append('g')
-    .attr("transform","translate(170,25)");
-//canvas -DESIGN
-var gr=d3.select('.hb1')
-    .append('svg')
-    .attr('width',width)
-    .attr('height',height)
-    .append('g')
-    .attr("transform","translate(170,25)");
-//canvas -Protoype
-var gr1=d3.select('.hb2')
-    .append('svg')
-    .attr('width',width)
-    .attr('height',height)
-    .append('g')
-    .attr("transform","translate(170,25)");
-//canvas -Web-Technolgies
-var gr2=d3.select('.hb3')
-    .append('svg')
-    .attr('width',width)
-    .attr('height',heightWeb)
-    .append('g')
-    .attr("transform","translate(170,25)");
-//canvas - languages
-var gr3=d3.select('.hb4')
-    .append('svg')
-    .attr('width',width)
-    .attr('height',heightWeb)
-    .append('g')
-    .attr("transform","translate(170,25)");
-//canvas - transform
-var gr4=d3.select('.hb5')
-    .append('svg')
-    .attr('width',width)
-    .attr('height',heightFram)
-    .append('g')
-    .attr("transform","translate(170,25)");
-//draw the bars for the canvas-design
-var bars= gr.selectAll('rect')
-    .data(chardata)
-    .enter()
-    .append('rect')
-    .style({
-        'fill':function(data,i){
-            return colorScale(data);
-        },
-        'stroke':'#7F5343',
-        'stroke-width':'5'
-    })
-    .attr('width',function(d){
-        return 0;
-    })
-    .attr('height',barHeight)
-    .attr('x',0)
-    .attr('y',function(d,i){
-        return (i*35);
-    });
-//draw the bars for the canvas - prototype
-var bars1= gr1.selectAll('rect')
-    .data(chardata1)
-    .enter()
-    .append('rect')
-    .style({
-        'fill':function(data,i){
-            return colorScale(data);
-        },
-        'stroke':'#7F5343',
-        'stroke-width':'5'
-    })
-    .attr('width',function(d){
-        return 0;
-    })
-    .attr('height',barHeight)
-    .attr('x',0)
-    .attr('y',function(d,i){
-        return (i*35);
-    });
-//draw the bars for the canvas - Development
-var bars2= gr2.selectAll('rect')
-    .data(chardata2)
-    .enter()
-    .append('rect')
-    .style({
-        'fill':function(data,i){
-            return colorScale(data);
-        },
-        'stroke':'#7F5343',
-        'stroke-width':'5'
-    })
-    .attr('width',function(d){
-        return 0;
-    })
-    .attr('height',barHeight)
-    .attr('x',0)
-    .attr('y',function(d,i){
-        return (i*35);
-    });
-//draw the bars for the canvas - Framework
-var bars3= gr3.selectAll('rect')
-    .data(chardata3)
-    .enter()
-    .append('rect')
-    .style({
-        'fill':function(data,i){
-            return colorScale(data);
-        },
-        'stroke':'#7F5343',
-        'stroke-width':'5'
-    })
-    .attr('width',function(d){
-        return 0;
-    })
-    .attr('height',barHeight)
-    .attr('x',0)
-    .attr('y',function(d,i){
-        return (i*35);
-    });
-//draw the bars for the canvas - Framework
-var bars4= gr4.selectAll('rect')
-    .data(chardata4)
-    .enter()
-    .append('rect')
-    .style({
-        'fill':function(data,i){
-            return colorScale(data);
-        },
-        'stroke':'#7F5343',
-        'stroke-width':'5'
-    })
-    .attr('width',function(d){
-        return 0;
-    })
-    .attr('height',barHeight)
-    .attr('x',0)
-    .attr('y',function(d,i){
-        return (i*35);
-    });
-//up x-axis
-gr0.append('g').attr("transform","translate(0,0)").attr('id','upx').call(xAxis);
-//group and translation of y axis
-gr.append('g').attr("transform","translate(0,5)").call(yAxis);
-gr1.append('g').attr("transform","translate(0,5)").call(yAxis1);
-gr2.append('g').attr("transform","translate(0,5)").call(yAxis2);
-gr3.append('g').attr("transform","translate(0,5)").call(yAxis3);
-gr4.append('g').attr("transform","translate(0,5)").call(yAxis4);
-//down x axis
-gr4.append('g').attr("transform","translate(0,250)").attr('id','downx').call(xAxis);
+    if(window.location.href.indexOf('#pdui') != -1) {
+        $('#pdui').modal('show');
+    }
 
-//apply animation
-gr.selectAll('rect').data(chardata).transition().duration(1000).attr('width',function(d){
-    return xScale(d);
 });
-gr1.selectAll('rect').data(chardata1).transition().duration(1000).attr('width',function(d){
-    return xScale(d);
-});
-gr2.selectAll('rect').data(chardata2).transition().duration(1000).attr('width',function(d){
-    return xScale(d);
-});
-gr3.selectAll('rect').data(chardata3).transition().duration(1000).attr('width',function(d){
-    return xScale(d);
-});
-gr4.selectAll('rect').data(chardata4).transition().duration(1000).attr('width',function(d){
-    return xScale(d);
-});
+google.charts.load('current', {packages: ['corechart']});
+google.charts.setOnLoadCallback(drawChart);
 
+function drawChart(){
+    var data = initialize(radioVal);
+    console.log(data);
+
+    var chart = new google.visualization.BarChart(document.getElementById('myChart'));
+    var options={
+        title:tit,
+        backgroundColor:{fill:'transparent'},
+        titleTextStyle: { color: '#E74C3C' },
+        hAxis: {
+            textStyle: {
+                color:'#E74C3C',
+
+            }
+        },
+        vAxis: {
+            textStyle: {
+                color:'#E74C3C'
+            }
+        },
+        colors:['#E74C3C'],
+        legend:'none',
+        'tooltip' : {
+            trigger: 'none'
+        }
+    };
+    chart.draw(data,options);
+}
+
+$(window).resize(function(){
+    drawChart();
+
+});
+//typed js for producing the typewriter js
 $(function(){
     $(".typeText").typed({
-        strings: ["Javascript", "Full-stack Developer."],
-        typeSpeed: 0,
-        loop:true
+        strings: ["JS FULL-STACK DEVELOPER."],
+        typeSpeed: 0
     });
 });
 
-$('.jum-but').click(function(){
+$("input[type='radio']").click(function(){
+    radioVal=$("input[name='ssradio']:checked").val();
+    console.log(radioVal);
+    drawChart(radioVal);
+});
 
-    gr.selectAll('rect').data(chardata).transition().duration(1000).attr('width',function(d){
-        return xScale(d);
-    });
-    gr1.selectAll('rect').data(chardata1).transition().duration(1000).attr('width',function(d){
-        return xScale(d);
-    });
-    gr2.selectAll('rect').data(chardata2).transition().duration(1000).attr('width',function(d){
-        return xScale(d);
-    });
-    gr3.selectAll('rect').data(chardata3).transition().duration(1000).attr('width',function(d){
-        return xScale(d);
-    });
-    gr4.selectAll('rect').data(chardata4).transition().duration(1000).attr('width',function(d){
-        return xScale(d);
-    });
+function initialize(){
 
-})
+    var data=new google.visualization.DataTable();
 
-
-
-
-
-
-
+    if(radioVal=='1') {
+        console.log('called');
+        data.addColumn('string', 'Design');
+        data.addColumn('number', 'Level');
+        tit="Design";
+        data.addRows([
+            ['Photoshop', 5],
+            ['Axure RP', 8]
+        ]);
+    }else if(radioVal=='2'){
+        data.addColumn('string', 'Web Technology');
+        data.addColumn('number', 'Level');
+        tit="Web Technologies";
+        data.addRows([
+            ['HTML 5', 6],
+            ['CSS 3', 6],
+            ['Javascript', 7]
+        ]);
+    }else if(radioVal=='3'){
+        data.addColumn('string', 'Frameworks');
+        data.addColumn('number', 'Level');
+        tit="Frameworks";
+        data.addRows([
+            ['Bootstrap', 8],
+            ['Angular', 7],
+            ['Node', 7],
+            ['Express',7],
+            ['jQuery',6],
+            ['MongooseJs',6]
+        ]);
+    }else if(radioVal=='4'){
+        data.addColumn('string', 'Databases');
+        data.addColumn('number', 'Level');
+        tit="Databases";
+        data.addRows([
+            ['MySQl', 5],
+            ['MongoDB', 8],
+        ]);
+    }else if(radioVal==5){
+        data.addColumn('string', 'SCM');
+        data.addColumn('number', 'Level');
+        tit="SCM";
+        data.addRows([
+            ['SVN', 5],
+            ['Git', 7],
+        ]);
+    }
+    return data;
+}
