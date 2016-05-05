@@ -13,10 +13,12 @@ $(document).ready(function() {
 google.charts.load('current', {packages: ['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
+
+
+
+
 function drawChart(){
     var data = initialize(radioVal);
-    console.log(data);
-
     var chart = new google.visualization.BarChart(document.getElementById('myChart'));
     var options={
         title:tit,
@@ -26,7 +28,9 @@ function drawChart(){
             textStyle: {
                 color:'#E74C3C',
 
-            }
+            },
+            minValue:0,
+            maxValue:10
         },
         vAxis: {
             textStyle: {
@@ -37,7 +41,13 @@ function drawChart(){
         legend:'none',
         'tooltip' : {
             trigger: 'none'
+        },
+        animation:{
+            startup:true,
+            duration: 1000,
+            easing: 'out',
         }
+
     };
     chart.draw(data,options);
 }
@@ -68,7 +78,7 @@ function initialize(){
         console.log('called');
         data.addColumn('string', 'Design');
         data.addColumn('number', 'Level');
-        tit="Design";
+        tit="Design Tools";
         data.addRows([
             ['Photoshop', 5],
             ['Axure RP', 8]
@@ -76,23 +86,26 @@ function initialize(){
     }else if(radioVal=='2'){
         data.addColumn('string', 'Web Technology');
         data.addColumn('number', 'Level');
-        tit="Web Technologies";
+        tit="Languages";
         data.addRows([
+            ['Java',6],
             ['HTML 5', 6],
             ['CSS 3', 6],
-            ['Javascript', 7]
+            ['Javascript', 7],
+            ['PHP',5]
         ]);
     }else if(radioVal=='3'){
         data.addColumn('string', 'Frameworks');
         data.addColumn('number', 'Level');
-        tit="Frameworks";
+        tit="Frameworks/SDKs";
         data.addRows([
             ['Bootstrap', 8],
-            ['Angular', 7],
-            ['Node', 7],
-            ['Express',7],
+            ['Angular', 6],
+            ['Node', 6],
+            ['Express',6],
             ['jQuery',6],
-            ['MongooseJs',6]
+            ['MongooseJs',6],
+            ['Android SDK',5]
         ]);
     }else if(radioVal=='4'){
         data.addColumn('string', 'Databases');
@@ -100,16 +113,18 @@ function initialize(){
         tit="Databases";
         data.addRows([
             ['MySQl', 5],
-            ['MongoDB', 8],
+            ['MongoDB', 7],
         ]);
     }else if(radioVal==5){
         data.addColumn('string', 'SCM');
         data.addColumn('number', 'Level');
-        tit="SCM";
+        tit="Tools";
         data.addRows([
             ['SVN', 5],
             ['Git', 7],
+            ['Grunt',5]
         ]);
     }
     return data;
 }
+
