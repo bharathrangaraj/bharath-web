@@ -23,10 +23,12 @@ function drawChart(){
     var options={
         title:tit,
         backgroundColor:{fill:'transparent'},
-        titleTextStyle: { color: '#E74C3C' },
+        titleTextStyle: { color: '#E74C3C',
+            fontName: 'Montserrat'},
         hAxis: {
             textStyle: {
                 color:'#E74C3C',
+                fontName: 'Montserrat'
 
             },
             minValue:0,
@@ -34,7 +36,8 @@ function drawChart(){
         },
         vAxis: {
             textStyle: {
-                color:'#E74C3C'
+                color:'#E74C3C',
+                fontName: 'Montserrat'
             }
         },
         colors:['#E74C3C'],
